@@ -147,7 +147,7 @@ if __name__=='__main__':
                         help='sample submission file for LSMDC.')
     parser.add_argument('-r', '--reference', type=str,
                         help='reference csv with ground truth captions')
-    parser.add_argument('-o', '--output', type=str,  default='result.json',
+    parser.add_argument('-o', '--output', type=str,  default='results/result.json',
                         help='output file with final language metrics.')
     parser.add_argument('-v', '--verbose', action='store_true',
                         help='Print intermediate steps.')
