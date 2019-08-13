@@ -106,7 +106,7 @@ class ANETcaptions(object):
             vid_id = info['video_id']
             if vid_id in gt_vid_ids:
                 pred = info['caption']
-                gt_caption = re.sub(r'[.!,;?]', ' ', self.ground_truth[vid_id].lower())
+                gt_caption = self.ground_truth[vid_id] # re.sub(r'[.!,;?]', ' ', self.ground_truth[vid_id].lower())
                 cur_res[unique_index] = [{'caption': remove_nonascii(pred)}]
                 cur_gts[unique_index] = [{'caption': remove_nonascii(gt_caption)}] # for now we use gt proposal
                 vid2capid[vid_id] = unique_index
